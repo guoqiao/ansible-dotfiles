@@ -34,14 +34,6 @@
         - virtualenv
         - virtualenvwrapper
 
-    - name: gem install
-      become: true
-      gem:
-        name: "{{ item }}"
-        state: latest
-      with_items:
-        - tmuxinator
-
     - name: start supervisor service
       become: true
       service:
@@ -65,10 +57,24 @@
         value:  "{{ item.value }}"
       with_items:
         - { name: "alias.br", value: "branch"}
+        - { name: "alias.bl", value: "branch --list"}
+        - { name: "alias.bd", value: "branch --delete"}
         - { name: "alias.co", value: "checkout"}
+        - { name: "alias.cb", value: "checkout -b"}
+        - { name: "alias.cp", value: "cherry-pick"}
+        - { name: "alias.cl", value: "config --list"}
         - { name: "alias.ci", value: "commit"}
+        - { name: "alias.ca", value: "commit --amend"}
+        - { name: "alias.fa", value: "fetch --all"}
+        - { name: "alias.rb", value: "rebase -i origin/master"}
+        - { name: "alias.rd", value: "push origin --delete"}
         - { name: "alias.st", value: "status"}
+        - { name: "alias.ll", value: "log --oneline"}
+        - { name: "alias.lg", value: "log --oneline --graph"}
         - { name: "color.ui", value: "true"}
+        - { name: "core.editor", value: "vim"}
+        - { name: "core.compression", value: "9"}
+        - { name: "branch.autosetuprebase", value: "always"}
 
     - name: create dirs
       file:

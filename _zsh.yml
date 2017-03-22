@@ -37,6 +37,7 @@
         line: "{{ item }}"
       with_items:
         - 'alias open="nautilus"'
+        - 'alias path="readlink -f"'
         - 'export EDITOR="vim"'
         - 'export WORKON_HOME=~/env'
         - 'source /usr/local/bin/virtualenvwrapper.sh'

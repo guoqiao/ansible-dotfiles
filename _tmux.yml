@@ -10,9 +10,9 @@
       apt:
         name: "{{ item }}"
         state: latest
-        update_cache: yes
       with_items:
         - tmux
+        - zsh
 
     - name: set up tmux.conf
       template:

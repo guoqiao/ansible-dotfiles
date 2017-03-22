@@ -7,7 +7,7 @@
     - name: change shell to zsh for current user
       become: true
       user:
-        name: "{{ user }}"
+        name: "{{ ansible_user }}"
         shell: /usr/bin/zsh
         generate_ssh_key: yes
 
@@ -30,11 +30,6 @@
         regexp: "^ZSH_THEME"
         line: 'ZSH_THEME="zhann"'
 
-    - name: download tmuxinator.zsh
-      get_url:
-        url: https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh
-        dest: ~/.bin/tmuxinator.zsh
-
     - name: add config to zshrc
       lineinfile:
         dest: ~/.zshrc
@@ -44,4 +39,3 @@
         - 'export EDITOR="vim"'
         - 'export WORKON_HOME=~/env'
         - 'source /usr/local/bin/virtualenvwrapper.sh'
-        - 'source ~/.bin/tmuxinator.zsh'

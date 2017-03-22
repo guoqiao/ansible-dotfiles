@@ -16,6 +16,11 @@
         - zsh
         - tmux
 
+    - name: set up tmux.conf
+      template:
+        src: templates/tmux.conf
+        dest: ~/.tmux.conf
+
     - name: gem install
       become: true
       gem:

@@ -80,4 +80,5 @@
         - static
         - media
 
-- include: oh_my_zsh.yml
+- include: _zsh.yml
+- include: _tmux.yml

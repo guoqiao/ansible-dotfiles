@@ -1,6 +1,6 @@
 ---
 # vim:ff=unix ts=2 sw=2 ai expandtab
-- name: set up oh-my-zsh
+- name: set up zsh
   hosts: ubuntu
   tasks:
 

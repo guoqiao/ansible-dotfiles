@@ -11,7 +11,7 @@
 
 - name: set up tmux.conf
   template:
-    src: templates/tmux.conf
+    src: tmux.conf
     dest: ~/.tmux.conf
 
 - name: gem install
@@ -43,5 +43,5 @@
 
 - name: render tmuxinator project example
   template:
-    src: templates/tmuxinator_project.yml
+    src: tmuxinator_project.yml
     dest: ~/.tmuxinator/example.yml

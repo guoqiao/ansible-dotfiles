@@ -24,7 +24,7 @@
   lineinfile:
     dest: ~/.zshrc
     regexp: "^ZSH_THEME"
-    line: 'ZSH_THEME="zhann"'
+    line: 'ZSH_THEME="bira"'
 
 - name: add config to zshrc
   lineinfile:

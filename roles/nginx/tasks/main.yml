@@ -1,7 +1,7 @@
 ---
 # vim:ff=unix ts=2 sw=2 ai expandtab
 
-- name: install postgresql
+- name: install nginx
   become: true
   apt:
     name: "{{ item }}"

@@ -1,0 +1,6 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+- name: set up a postgresql db server
+  hosts: dbservers
+  roles:
+    - postgresql

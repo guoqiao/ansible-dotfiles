@@ -1,0 +1,10 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: restart nginx
+  become: true
+  service:
+    name: nginx
+    state: restarted
+  listen: "resetart web services"
+

@@ -1,0 +1,15 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: restart supervisor
+  become: true
+  service:
+    name: supervisor
+    state: restarted
+  listen: "resetart web services"
+
+- name: supervisorctl update
+  become: true
+  command: "supervisorctl update"
+  listen: "resetart web services"
+

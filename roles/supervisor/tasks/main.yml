@@ -1,0 +1,18 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: install postgresql
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - supervisor
+
+- name: start supervisor service
+  service:
+    name: supervisor
+    state: started
+    enabled: yes
+

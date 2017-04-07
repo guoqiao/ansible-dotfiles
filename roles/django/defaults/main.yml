@@ -1,22 +1,22 @@
 ---
 # vim:ff=unix ts=2 sw=2 ai expandtab
 user: ubuntu
+git_repo: git@github.com:guoqiao/django-layout.git
+git_branch: master
+site_name: layout-dev
+django_settings_module: layout.settings.dev
+django_initial_fixtures: "init_sites init_socialapps init_users"
+
+# derived vars
+## system dirs
 home: "/home/{{ user }}"
 git_home: "{{ home }}/git"
 env_home: "{{ home }}/env"
 static_home: "{{ home }}/static"
 media_home: "{{ home }}/static"
+## site dirs
+git_root: "{{ git_home }}/{{ site_name }}"
+env_root: "{{ env_home }}/{{ site_name }}"
+static_root: "{{ static_home }}/{{ site_name }}"
+media_root: "{{ media_home }}/{{ site_name }}"
 
-site_name: django-layout
-# git clone dir name, will use in path and config
-site_instance_name: django-layout-dev
-django_settings_module: django-layout.settings.dev
-django_initial_fixtures: "init_sites init_socialapps init_users"
-
-git_root: "{{ git_home }}/{{ site_instance_name }}"
-env_root: "{{ env_home }}/{{ site_instance_name }}"
-static_root: "{{ static_home }}/{{ site_instance_name }}"
-media_root: "{{ media_home }}/{{ site_instance_name }}"
-
-git_repo: git@github.com:guoqiao/django-layout.git
-git_branch: master

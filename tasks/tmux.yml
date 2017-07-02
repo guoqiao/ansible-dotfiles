@@ -1,14 +1,5 @@
 ---
 # vim:ff=unix ts=2 sw=2 ai expandtab
-- name: apt-get install
-  become: true
-  apt:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - tmux
-    - zsh
-
 - name: set up tmux.conf
   template:
     src: tmux.conf
@@ -40,8 +31,3 @@
     line: "{{ item }}"
   with_items:
     - 'source ~/bin/tmuxinator.zsh'
-
-- name: render tmuxinator project example
-  template:
-    src: tmuxinator_project.yml
-    dest: ~/.tmuxinator/example.yml

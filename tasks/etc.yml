@@ -1,0 +1,16 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: create dirs
+  file:
+    state: directory
+    path: "~/{{ item }}"
+  with_items:
+    - git
+    - src
+    - env
+    - bin
+    - static
+    - media
+    - data
+    - tmp

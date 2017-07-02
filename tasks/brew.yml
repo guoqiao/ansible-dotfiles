@@ -1,0 +1,18 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: brew install common packages
+  brew:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - python-dev
+    - python3-dev
+    - the_silver_searcher
+    - htop
+    - git-all
+    - tmux
+    - tree
+    - zsh
+    - vim

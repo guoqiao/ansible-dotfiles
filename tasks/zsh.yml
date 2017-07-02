@@ -31,7 +31,6 @@
     dest: ~/.zshrc
     line: "{{ item }}"
   with_items:
-    - 'alias open="nautilus"'
     - 'alias path="readlink -f"'
     - 'export EDITOR="vim"'
     - 'export WORKON_HOME=~/env'

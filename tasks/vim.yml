@@ -1,0 +1,27 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: get latest vim code
+  git:
+    repo: 'https://github.com/vim/vim.git'
+    dest: '/tmp/vim'
+    clone: yes
+    update: yes
+    force: yes
+    version: master
+
+- name: config vim
+  shell: ./configure --prefix=/usr/ --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-python3interp
+  args:
+    chdir: '/tmp/vim'
+
+- name: make vim
+  shell: make
+  args:
+    chdir: '/tmp/vim'
+
+- name: make install vim
+  become: true
+  shell: make install
+  args:
+    chdir: '/tmp/vim'

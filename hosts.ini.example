@@ -1,2 +1,2 @@
 [ubuntu]
-joeg-pc ansible_connection=local user=joeg
+localhost ansible_connection=local ansible_port=22

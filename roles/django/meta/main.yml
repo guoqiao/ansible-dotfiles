@@ -1,7 +1,0 @@
----
-# vim:ff=unix ts=2 sw=2 ai expandtab
-dependencies:
-  - { role: ubuntu }
-  - { role: git }
-  - { role: zsh }
-  - { role: tmux }

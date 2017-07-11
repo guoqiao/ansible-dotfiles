@@ -1,0 +1,17 @@
+---
+# vim:ff=unix ts=2 sw=2 ai expandtab
+
+- name: set up a ubuntu
+  hosts: ubuntu
+
+  tasks:
+
+    - include: tasks/apt.yml
+    - include: tasks/pip.yml
+    - include: tasks/git.yml
+    - include: tasks/zsh.yml
+    - include: tasks/tmux.yml
+    - include: tasks/vim.yml
+    - include: tasks/etc.yml
+
+

@@ -19,7 +19,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'  " let Vundle manage Vundle, required!
 Plugin 'vim-indent-object'  " vii to visual select current indent
-Plugin 'Yggdroot/indentLine' " show indent line
 Plugin 'matchit.zip' " % to match
 Plugin 'repeat.vim' " . to repeat
 Plugin 'surround.vim'
@@ -27,6 +26,7 @@ Plugin 'molokai'
 Plugin 'colorizer'  " show color for css
 Plugin 'python.vim'
 Plugin 'vim-autopep8'  " F8 to format
+Plugin 'vim-airline/vim-airline'
 
 Plugin 'w0rp/ale'
 let g:ale_sign_column_always = 1
@@ -106,7 +106,7 @@ set ruler
 set number
 set relativenumber
 set hidden
-set nowrap
+set wrap
 set autoread
 set cursorline
 

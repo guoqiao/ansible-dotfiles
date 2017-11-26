@@ -30,4 +30,4 @@
     dest: ~/.zshrc
     line: "{{ item }}"
   with_items:
-    - 'source ~/bin/tmuxinator.zsh'
+    - 'source $HOME/bin/tmuxinator.zsh'

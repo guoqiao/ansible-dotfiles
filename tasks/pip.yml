@@ -11,3 +11,6 @@
     - virtualenv
     - virtualenvwrapper
     - ipython
+    - pylint
+    - ansible
+    - django

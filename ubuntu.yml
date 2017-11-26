@@ -6,12 +6,12 @@
 
   tasks:
 
-    - include: tasks/apt.yml
-    - include: tasks/pip.yml
-    - include: tasks/git.yml
-    - include: tasks/zsh.yml
-    - include: tasks/tmux.yml
-    - include: tasks/vim.yml
-    - include: tasks/etc.yml
+    - import_tasks: tasks/apt.yml
+    - import_tasks: tasks/pip.yml
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/tmux.yml
+    - import_tasks: tasks/vim.yml
+    - import_tasks: tasks/etc.yml
 
 

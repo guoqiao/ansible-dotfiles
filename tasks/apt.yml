@@ -13,6 +13,7 @@
     - htop
     - postgresql
     - postgresql-contrib
+    - pwgen
     - python-dev
     - python-pip
     - python-psycopg2

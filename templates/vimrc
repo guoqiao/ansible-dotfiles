@@ -152,8 +152,16 @@ set smarttab
 set autoindent
 set smartindent
 set copyindent
-set shiftwidth=4
-set tabstop=4
+
+autocmd FileType python     setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+autocmd FileType html       setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType xml        setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType yml        setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType yaml       setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType css        setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType scss       setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 nnoremap ; :
 nnoremap 0 ^

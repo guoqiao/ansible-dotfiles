@@ -26,12 +26,35 @@
     regexp: "^ZSH_THEME"
     line: 'ZSH_THEME="bira"'
 
+- name: open file with vim
+  lineinfile:
+    dest: ~/.zshrc
+    line: "alias -s {{ item }}=vim"
+  with_items:
+    - py
+    - md
+    - txt
+    - log
+    - xml
+    - ini
+    - yml
+    - html
+    - js
+    - json
+    - css
+    - scss
+    - sass
+
 - name: add config to zshrc
   lineinfile:
     dest: ~/.zshrc
     line: "{{ item }}"
   with_items:
     - 'alias path="readlink -f"'
+    - 'alias hi="history"'
+    - 'alias pm="python manage.py"'
+    - 'alias pmr="python manage.py runserver"'
+    - 'alias pms="python manage.py shell_plus"'
     - 'export EDITOR="vim"'
-    - 'export WORKON_HOME=~/env'
-    - 'source /usr/local/bin/virtualenvwrapper.sh'
+    - 'export WORKON_HOME=$HOME/env'
+    - 'source $HOME/bin/virtualenvwrapper.sh'

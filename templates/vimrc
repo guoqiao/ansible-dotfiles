@@ -55,7 +55,7 @@ Plugin 'The-NERD-Commenter'  " leader + c + i to toggle comment
 let NERDSpaceDelims = 1  " add space after comment delim for pep8
 
 Plugin 'airblade/vim-gitgutter'
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 Plugin 'terryma/vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0

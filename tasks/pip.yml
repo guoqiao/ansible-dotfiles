@@ -5,12 +5,6 @@
 - name: install pip and common python packages
   become: true
   pip:
-    name: "{{ item }}"
+    requirements: requirements.txt
     state: latest
-  with_items:
-    - virtualenv
-    - virtualenvwrapper
-    - ipython
-    - pylint
-    - ansible
-    - django
+    chdir: yes

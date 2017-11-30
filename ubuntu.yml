@@ -3,15 +3,15 @@
 
 - name: set up a ubuntu
   hosts: ubuntu
+  gather_facts: no
 
   tasks:
-
     - import_tasks: tasks/apt.yml
     - import_tasks: tasks/pip.yml
     - import_tasks: tasks/git.yml
     - import_tasks: tasks/zsh.yml
     - import_tasks: tasks/tmux.yml
-    - import_tasks: tasks/vim.yml
+    # - import_tasks: tasks/vim.yml
     - import_tasks: tasks/etc.yml
     - import_tasks: tasks/sublime_text.yml
 

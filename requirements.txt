@@ -1,5 +1,10 @@
+ansible
+django
+httpie
+ipython
+pgcli
 pip
+pylint
 setuptools
 virtualenv
 virtualenvwrapper
-ansible

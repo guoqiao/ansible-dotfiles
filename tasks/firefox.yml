@@ -1,0 +1,17 @@
+---
+
+- name: add apt repo for firefox
+  become: yes
+  apt_repository:
+    repo: ppa:mozillateam/firefox-next
+    filename: 'mozilla-firefox'
+    state: present
+
+- name: apt install firefox
+  become: yes
+  apt:
+    name: firefox
+    state: latest
+    update_cache: yes
+
+

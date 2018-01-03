@@ -104,9 +104,9 @@ syntax enable
 set so=10
 set ruler
 set number
-set relativenumber
+" set relativenumber
 set hidden
-set wrap
+set nowrap
 set autoread
 set cursorline
 
